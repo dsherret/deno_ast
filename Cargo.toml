@@ -22,6 +22,7 @@ proposal = ["transforms", "swc_ecma_transforms_proposal", "swc_ecma_transforms_c
 react = ["transforms", "swc_ecma_transforms_react", "swc_ecma_transforms_macros", "swc_config", "swc_config_macro", "swc_macros_common"]
 scopes = ["view", "utils", "visit"]
 sourcemap = ["dprint-swc-ext/sourcemap"]
+stacker = ["swc_ecma_parser/stacker"]
 transforms = ["swc_ecma_loader", "swc_ecma_transforms_base"]
 transpiling = ["anyhow", "base64", "codegen", "proposal", "react", "sourcemap", "transforms", "typescript", "utils", "visit"]
 typescript = ["transforms", "swc_ecma_transforms_typescript"]
@@ -56,7 +57,7 @@ swc_ecma_ast = { version = "=0.112.7", features = ["serde-impl"] }
 swc_ecma_codegen = { version = "=0.148.14", optional = true }
 swc_ecma_codegen_macros = { version = "=0.7.4", optional = true }
 swc_ecma_loader = { version = "=0.45.25", optional = true }
-swc_ecma_parser = "=0.143.12"
+swc_ecma_parser = { version = "=0.143.12", features = ["typescript"], default-features = false }
 swc_ecma_transforms_base = { version = "=0.137.17", optional = true }
 swc_ecma_transforms_classes = { version = "=0.126.16", optional = true }
 swc_ecma_transforms_compat = { version = "=0.163.18", optional = true }
