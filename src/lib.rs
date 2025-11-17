@@ -23,6 +23,8 @@ mod parsing;
 #[cfg(feature = "scopes")]
 mod scopes;
 mod source_map;
+#[cfg(feature = "stripping")]
+mod stripping;
 mod text_changes;
 #[cfg(feature = "transpiling")]
 mod transpiling;
